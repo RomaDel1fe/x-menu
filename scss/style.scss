@@ -55,3 +55,125 @@ a {
 html {
   height: 100%;
 }
+
+.container{
+   padding: 30px;
+}
+.title{
+   font-size: 40px;
+   font-weight: 800;
+   display: block;
+   text-align: center;
+   text-transform: uppercase;
+   padding: 15px;
+   background: #00509d;
+   color: #ffd500;
+   border-radius: 5px;
+   letter-spacing: 5px;
+   margin-bottom: 40px;
+}
+
+.menu {
+   & li{
+      position: relative;
+   }
+   &__list {
+      display: flex;
+      justify-content: center;
+      // background: #ffd500;
+      // border: 1px solid #00509d;
+      // border-radius: 15px;
+      &>li{
+         margin: 0;
+         &:hover .menu__list{
+            border-bottom-left-radius: 0px;
+         }
+         &:hover .sub-menu__list{
+            display: block;
+         }
+      }
+   }
+   &__link {
+      display: inline-block;
+      font-size: 25px;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: center;
+      min-width: 300px;
+      padding: 10px 15px;
+      color: #00509d;
+      background: #ffd500;
+      border: 1px solid #00509d;
+   }
+   &__arrow{
+
+   }
+}
+
+// .arrrow{
+//    position: absolute;
+//    right: 0;
+//    top: 20px;
+//    width: 0;
+//    height: 0;
+//    border-top: 10px solid #00509d;
+//    border-right: 10px solid transparent;
+//    border-left: 10px solid transparent;
+
+// }
+
+.sub-menu__list {
+   display: none;
+   position: absolute;
+   left: 0;
+   top: 25px;
+   padding-top: 25px;
+   &>li{
+      background: #00509d;
+      &:hover .sub-sub-menu__list{
+         display: block;
+      }
+   }
+}
+.sub-menu__link {
+   display: inline-block;
+   font-size: 20px;
+   font-weight: 400;
+   text-transform: uppercase;
+   text-align: center;
+   min-width: 302px;
+   padding: 10px 15px;
+   color: #ffd500;
+
+}
+.sub-sub-menu__list {
+   display: none;
+   position: absolute;
+   top: 0;
+   left: 100%;
+   padding-left: 5px;
+   background: #00509d;
+   &>li{
+      
+   }
+}
+.sub-sub-menu__link {
+   display: inline-block;
+   font-size: 18px;
+   font-weight: 400;
+   text-transform: uppercase;
+   text-align: center;
+   min-width: 297px;
+   padding: 10px 15px;
+   color: #ffd500;
+}
+
+.heroes{
+   top: 0;
+   left: 100%;
+}
+
+.enemies{
+   top: 0;
+   left: -100%;
+}
